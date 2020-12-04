@@ -1,0 +1,15 @@
+pip install djangorestframework-simplejwt
+
+http POST http://127.0.0.1:8000/gettoken/ username="user" password="nitishmahato"
+
+http POST http://127.0.0.1:8000/verifytoken/ token="eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjA2MDU4NDYyLCJqdGkiOiJiMjJmY2UyMzYwMjU0ZGRlODAwY2VjZTc1NzQ5ZDkyMiIsInVzZXJfaWQiOjJ9.BAycLEFKjU-v2hG2oTt84j_06NDOhofhUEvnOQXWlgY"
+
+http http://127.0.0.1:8000/studentapi/
+
+http http://127.0.0.1:8000/studentapi/ 'Authorization:Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjA2MDk1MTI4LCJqdGkiOiI5MDZlYjY4M2RkMjY0MDA5ODllMWYxZjc0MWFjNzMwNSIsInVzZXJfaWQiOjJ9.JoSBQP9UK86psb-4-jauNpGEEO1HXee-nRWNKH6gOMQ'
+
+http -f POST http://127.0.0.1:8000/studentapi/ name=Hina roll=108 city=Dhanbad 'Authorization:Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjA2MDk1MzE1LCJqdGkiOiIzY2E0ODE5MTExYTE0OGMxYTdlYzM2YzA5OTY1ZmJiOSIsInVzZXJfaWQiOjJ9.jt2Lm1B_rp0sinbmIo03GiAfWZtShWXeR9PGS53FoaM'
+
+http PUT http://127.0.0.1:8000/studentapi/3/ name=Hika roll=109 city=Bokaro 'Authorization:Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjA2MDk1NjM5LCJqdGkiOiIwNjllOGY5OTk4NDk0NDE4YTBmODU3NTliN2QxMTZhNSIsInVzZXJfaWQiOjJ9.HOrKV5tDal7tSbxc5j0EWJPjTYPx-bII6MmeO5jOyv0'
+
+http DELETE http://127.0.0.1:8000/studentapi/3/ 'Authorization:Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjA2MDk1NjM5LCJqdGkiOiIwNjllOGY5OTk4NDk0NDE4YTBmODU3NTliN2QxMTZhNSIsInVzZXJfaWQiOjJ9.HOrKV5tDal7tSbxc5j0EWJPjTYPx-bII6MmeO5jOyv0'
